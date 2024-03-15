@@ -1,0 +1,16 @@
+.side-menu {
+    height: 100vh;
+    width: 300px;
+    background: var(--secondary-color);
+    font-weight: 900;
+}
+
+.log-out {
+    align-items: flex-end;
+}
+
+@media (max-width: 1400px) {
+    .side-menu {
+        width: 200px;
+    }
+}

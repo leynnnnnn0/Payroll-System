@@ -1,0 +1,11 @@
+.employees-table {
+    background: var(--secondary-color);
+    overflow-y: auto;
+    min-width: 800px;
+}
+
+.table-employees, th, td {
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid black;
+}

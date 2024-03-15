@@ -1,0 +1,25 @@
+.salary-form {
+    background: var(--secondary-color);
+}
+
+.form-input-l input {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 2rem;
+    text-indent: 0.5rem;
+}
+
+.form-input-s input {
+    width: 140px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-indent: 0.5rem;
+    border-radius: 10px;
+    height: 2rem;
+}
+
+.submit-button {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
