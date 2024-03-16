@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
-const notifySuccess = () =>
-  toast.success("Sent successfully!", {
+const notifySuccess = (text) =>
+  toast.success(text, {
     position: "top-center",
     autoClose: 2000,
     hideProgressBar: false,

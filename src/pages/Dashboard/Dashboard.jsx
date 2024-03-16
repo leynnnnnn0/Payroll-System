@@ -2,17 +2,12 @@ import "./Dashboard.css";
 import SideMenu from "../../components/SideMenu/SideMenu";
 import Statistics from "../../components/Statistics/Statistics";
 import EmployeesTable from "../../components/EmployessTable/EmployeesTable";
-// import SalaryForm from "../../components/SalaryForm/SalaryForm";
 import { useState } from "react";
-import OutsideClickHandler from 'react-outside-click-handler';
 import EmployeeForm from "../../components/EmployeeForm/EmployeeForm";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Dashboard = () => {
-    // const [show, setShow] = useState(false);
     const [showEdit, setShowEdit] = useState(false);
-    // const handleClick = () => {
-    //     setShow(true)
-    // }
     const handleEdit = () => {
       setShowEdit(true)
     }
@@ -23,11 +18,6 @@ const Dashboard = () => {
             {showEdit && <EmployeeForm />}
         </OutsideClickHandler>
       </div>
-      {/* <div className="salary-form-area">
-        <OutsideClickHandler onOutsideClick={() => setShow(false)}>
-            {show && <SalaryForm />}
-        </OutsideClickHandler>
-      </div> */}
       <div className="dashboard flex HandW">
         <div className="menu">
           <SideMenu />

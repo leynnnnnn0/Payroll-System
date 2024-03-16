@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./EmployeeForm.css"
 import { employeesStore } from "../../store/employeesStore"
 import { ToastContainer } from "react-toastify"
-import { notifySuccess, notifyError, notifyIncomplete } from "../../alerts.js"
+import { notifySuccess, notifyIncomplete } from "../../alerts.js"
 import 'react-toastify/dist/ReactToastify.css';
 
 const EmployeeForm = () => {
@@ -29,7 +29,7 @@ const EmployeeForm = () => {
         const {fullName, email, phoneNumber, address, TIN, SSS, PAGIBIG, PHILHEALTH} = info
         if(fullName, phoneNumber, address) {
             addEmployee(fullName, email, parseFloat(phoneNumber), address, parseFloat(TIN), parseFloat(SSS), parseFloat(PAGIBIG), parseFloat(PHILHEALTH));
-            notifySuccess();
+            notifySuccess("Added succesffully!");
             setInfo({
                 fullName: "",
                 email: "",

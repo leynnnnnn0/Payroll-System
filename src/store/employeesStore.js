@@ -27,12 +27,12 @@ export const employeesStore = create((set) => ({
             console.log(err);
         }
     },
-    setSalary: async (_id, GROSS_PAY, TOTAL_DEDUCTIONS, ADDITIONAL_PAY, NET_SALARY) => {
+    setSalary: async (_id, GROSS_PAY, TOTAL_DEDUCTIONS, ADDITIONAL_PAY, NET_PAY) => {
         try {
-            const res = await axios.put(`http://localhost:8000/payroll-system/set-salary/${_id}`, {GROSS_PAY, TOTAL_DEDUCTIONS, ADDITIONAL_PAY, NET_SALARY});
+            const res = await axios.put(`http://localhost:8000/payroll-system/set-salary/${_id}`, {GROSS_PAY, TOTAL_DEDUCTIONS, ADDITIONAL_PAY, NET_PAY});
             console.log(res)
         } catch (err) {
             console.log(err);
         }
-    }
+    },
 }))

@@ -2,3 +2,11 @@
     min-width: 800px;
     background: var(--secondary-color);
 }
+
+
+.salary-form-area {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
