@@ -4,6 +4,7 @@ import { employeesStore } from "../../store/employeesStore";
 import { useEffect, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import SalaryForm from "../../components/SalaryForm/SalaryForm";
+import Loading from "../../Loading";
 const PayrollDetails = () => {
   const [id, setId] = useState()
   const [name, setName] = useState("")
@@ -41,7 +42,7 @@ const PayrollDetails = () => {
                   <th>Net Salary</th>
                 </tr>
               </thead>
-              <tbody>
+              {employeesList.length > 0 ? <><tbody>
                 {employeesList?.map((item) => (
                   <tr
                     onClick={() => handleClick(item.fullName, item._id)}
@@ -55,7 +56,7 @@ const PayrollDetails = () => {
                     <td>{item.NET_PAY}</td>
                   </tr>
                 ))}
-              </tbody>
+              </tbody></> : <Loading/>}
             </table>
           </div>
         </div>
