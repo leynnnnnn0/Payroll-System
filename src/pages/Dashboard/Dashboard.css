@@ -1,6 +1,19 @@
+.dashboard {
+    overflow-y: hidden;
+}
+
 .salary-form-area {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.edit-details-area {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    color: white;
 }

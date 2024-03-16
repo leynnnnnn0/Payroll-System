@@ -11,7 +11,7 @@
   --l: 2rem;
   --m: 1.5rem;
   --s: 1rem;
-  --xs: 0.8rem;
+  --xs: 1rem;
 }
 
 * {
@@ -133,7 +133,7 @@
   background: aquamarine;
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1500px){
   :root {
     --l: 1.5rem;
     --m: 1rem;

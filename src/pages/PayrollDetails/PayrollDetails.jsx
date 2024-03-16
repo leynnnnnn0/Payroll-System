@@ -1,9 +1,16 @@
 import "./PayrollDetails.css"
 import SideMenu from "../../components/SideMenu/SideMenu"
-import fakeData from "../../components/EmployessTable/fakeData"
+import { employeesStore } from "../../store/employeesStore"
+import { useEffect } from "react";
 
 const PayrollDetails = () => {
+  const {employeesList, fetchEmployees} = employeesStore();
+  useEffect(() => {
+    fetchEmployees()
+  }, [0])
+  useEffect(() => {}, [employeesList])
   return (
+    <>
     <div className="payroll-details flex">
         <div className="menu">
         <SideMenu />
@@ -13,30 +20,29 @@ const PayrollDetails = () => {
       <table className="table-employees w100 s">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Date of Birth</th>
-                    <th>Address</th>
+                    <th>Gross Pay</th>
+                    <th>Total Deductions</th>
+                    <th>Additional Pay</th>
+                    <th>Net Salary</th>
                 </tr>
             </thead>
             <tbody>
-                {fakeData.map(item => (
-                    <tr key={item.id}>
-                        <td>{item.id}</td>
-                        <td>{item.fullName}</td>
-                        <td>{item.email}</td>
-                        <td>{item.phoneNumber}</td>
-                        <td>{item.dateOfBirth}</td>
-                        <td>{item.address}</td>
-                    </tr>
+                {employeesList?.map(item => (
+                  <tr className={item.NET_PAY > 0 ? "green" : "red"} key={item.id}>
+                      <td>{item.fullName}</td>
+                      <td>{item.GROSS_PAY}</td>
+                      <td>{item.TOTAL_DEDUCTIONS}</td>
+                      <td>{item.ADDITIONAL_PAY}</td>
+                      <td>{item.NET_PAY}</td>
+                  </tr>
                 ))}
             </tbody>
         </table>
       </div>
       </div>
     </div>
+    </>
   )
 }
 
